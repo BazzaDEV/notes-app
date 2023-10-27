@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -w",
-    "dev": "nodemon server.ts",
+    "dev": "nodemon -r dotenv/config server.ts",
     "start": "node build/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/cors": "^8.4.0",
     "@prisma/client": "5.5.2",
     "@trpc/server": "^10.43.0",
     "fastify": "^4.24.3",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.8.9",
+    "dotenv": "^16.3.1",
     "nodemon": "^3.0.1",
     "prisma": "^5.5.2",
     "ts-node": "^10.9.1",
